@@ -17,6 +17,7 @@
         <Canvas>
             <Button Style="{DynamicResource Typewriter}" Height="76" Width="78" Canvas.Left="80" Canvas.Top="342" HorizontalAlignment="Left" VerticalAlignment="Top">
             </Button>
+            <Button Style="{DynamicResource Typewriter}" Height="76" Width="78" Canvas.Left="197" Canvas.Top="342" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
     </Grid>
 </Window>
