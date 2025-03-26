@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnigmaDesign"
         mc:Ignorable="d"
-        Title="Plugboard" Height="400" Width="650" Closed="Close" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+        Title="Plugboard" Height="400" Width="650" Closed="Close" ResizeMode="NoResize" WindowStartupLocation="Manual">
 
     <Window.Resources>
         <ResourceDictionary>
