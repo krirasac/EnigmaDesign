@@ -25,7 +25,7 @@ namespace EnigmaDesign
     public partial class MainWindow : Window
     {
         Border[] lampboard = new Border[26];
-        Plugboard configPlug = new Plugboard();
+        Plugboard configPlug;
         Display msg;
 
         public string _control = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Standard alphabet for reference
@@ -109,6 +109,29 @@ namespace EnigmaDesign
             }
         }
 
+        private void LightKey(char letter)
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(2);
+
+            for (int x = 0; x < lampboard.Length; x++)
+            {
+                if (letter == _control[x])
+                {
+                    lampboard[x].Background = Brushes.CadetBlue;
+                    timer.Start();
+
+                    timer.Tick += (s, args) =>
+                    {
+                        lampboard[x].Background = Brushes.FloralWhite;
+                        timer.Stop();
+                    };
+
+                    break;
+                }
+            }
+        }
+
         // Find the index of a character in a string
         private int IndexSearch(string ring, char letter)
         {
@@ -140,6 +163,7 @@ namespace EnigmaDesign
                             DisplayMessage(msg.MessageTB, e.Key.ToString()[0]);
                             DisplayMessage(msg.EncryptedTB, Encrypt(e.Key.ToString()[0]));
                             LightLamp(Encrypt(e.Key.ToString()[0]));
+                            LightKey(e.Key.ToString()[0]);
                             DisplayMessage(msg.MirroredTB, Mirror(e.Key.ToString()[0]));
                         }
                     }
@@ -343,17 +367,27 @@ namespace EnigmaDesign
 
         private void PlugboardBTN_Click(object sender, RoutedEventArgs e)
         {
+            configPlug = new Plugboard
+            {
+                Left = 40,
+                Top = this.Top + 470
+            };
+            
             configPlug.machine = this;
             configPlug.Show();
 
             RotorBTN.IsEnabled = true;
             PlugboardBTN.IsEnabled = false;
+            ringDisplay1.IsEnabled = true;
+            ringDisplay2.IsEnabled = true;
+            ringDisplay3.IsEnabled = true;
         }
 
         private void CloseAll(object sender, EventArgs e)
         {
             this.Close();
             msg.Close();
+            configPlug.Close();
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
@@ -365,16 +399,15 @@ namespace EnigmaDesign
 
             PlugboardBTN.IsEnabled = true;
             RotorBTN.IsEnabled = false;
-            ringDisplay1.IsEnabled = true;
-            ringDisplay2.IsEnabled = true;
-            ringDisplay3.IsEnabled = true;
+            ringDisplay1.IsEnabled = false;
+            ringDisplay2.IsEnabled = false;
+            ringDisplay3.IsEnabled = false;
 
             RotorBTN.Content = "Configure Rotors";
             reflectorDisplay.Content = "0";
             msg.MessageTB.Text = String.Empty;
             msg.EncryptedTB.Text = String.Empty;
             msg.MirroredTB.Text = String.Empty;
-
 
             DisplayRing(ringDisplay1, "0");
             DisplayRing(ringDisplay2, "0");

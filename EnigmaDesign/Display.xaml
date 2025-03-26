@@ -5,14 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnigmaDesign"
         mc:Ignorable="d"
-        Title="Display" Height="450" Width="400">
-    <Grid>
-        <TextBlock x:Name="MessageTB" HorizontalAlignment="Center" Height="69" Margin="0,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="333"/>
-        <TextBlock x:Name="EncryptedTB" HorizontalAlignment="Center" Height="69" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332" Margin="0,200,0,0"/>
-        <TextBlock x:Name="MirroredTB" HorizontalAlignment="Center" Height="69" Margin="0,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332"/>
-        <Label Content="Message" HorizontalAlignment="Left" Height="37" Margin="34,40,0,0" VerticalAlignment="Top" Width="79" VerticalContentAlignment="Center"/>
-        <Label Content="Encrypted" HorizontalAlignment="Left" Height="37" Margin="34,159,0,0" VerticalAlignment="Top" Width="79" VerticalContentAlignment="Center"/>
-        <Label Content="Mirrored" HorizontalAlignment="Left" Height="37" Margin="34,281,0,0" VerticalAlignment="Top" Width="79" VerticalContentAlignment="Center"/>
+        Title="Display" Height="460" Width="400">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Design.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="FloralWhite">
+        <TextBlock Style="{DynamicResource Message}" x:Name="MessageTB" HorizontalAlignment="Center" Height="69" Margin="0,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312"/>
+        <TextBlock Style="{DynamicResource Message}" x:Name="EncryptedTB" HorizontalAlignment="Center" Height="69" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="313" Margin="0,200,0,0"/>
+        <TextBlock Style="{DynamicResource Message}" x:Name="MirroredTB" HorizontalAlignment="Center" Height="69" Margin="0,330,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312"/>
+        <Label Style="{DynamicResource Header}" Content="Message" HorizontalAlignment="Left" Height="37" Margin="34,30,0,0" VerticalAlignment="Top" Width="137" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <Label Style="{DynamicResource Header}" Content="Encrypted" HorizontalAlignment="Left" Height="37" Margin="34,159,0,0" VerticalAlignment="Top" Width="137" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <Label  Style="{DynamicResource Header}" Content="Mirrored" HorizontalAlignment="Left" Height="37" Margin="34,291,0,0" VerticalAlignment="Top" Width="137" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
 
     </Grid>
 </Window>

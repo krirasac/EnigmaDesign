@@ -22,6 +22,9 @@ namespace EnigmaDesign
         public MainWindow machine { get; set; }
         bool key = false, value = false;
         int plugs = 10;
+        Brush[] borderColor = new Brush[10]
+        {Brushes.Red, Brushes.Orange, Brushes.Yellow, Brushes.Green,
+            Brushes.Red,Brushes.CornflowerBlue,Brushes.Violet,Brushes.Pink,Brushes.Coral,Brushes.MediumVioletRed};
         
         Button plugA, plugB;
         Button[] plugBTN = new Button[26];
@@ -80,6 +83,9 @@ namespace EnigmaDesign
                         value = true;
                         ConnectPlugs(plugA.ToString()[0], plugB.ToString()[0]);
                         Counter.Content = plugs;
+
+                        plugA.BorderBrush = borderColor[plugs];
+                        plugB.BorderBrush = borderColor[plugs];
                         plugA.IsEnabled = false;
                         plugB.IsEnabled = false;
                     }

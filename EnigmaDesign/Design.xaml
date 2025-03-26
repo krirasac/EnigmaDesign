@@ -17,7 +17,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                    <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="5" SnapsToDevicePixels="true">
                         <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -69,10 +69,22 @@
     </Style>
 
     <!-- Machine Labels -->
-        <Style x:Key="Labeling" TargetType="{x:Type Label}">
+    <Style x:Key="Labeling" TargetType="{x:Type Label}">
         <Setter Property="Foreground" Value="#F0F0F0F0"/>
         <Setter Property="FontWeight" Value="ExtraBold"/>
         <Setter Property="FontSize" Value="20"/>
     </Style>
-
+    
+    <!-- Message Labels -->
+    <Style x:Key="Header" TargetType="{x:Type Label}">
+        <Setter Property="Foreground" Value="SaddleBrown"/>
+        <Setter Property="FontWeight" Value="ExtraBold"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+    
+    <Style x:Key="Message" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="SaddleBrown"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
 </ResourceDictionary>
