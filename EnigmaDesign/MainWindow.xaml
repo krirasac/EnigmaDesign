@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnigmaDesign"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="800">
+        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize" KeyDown="Type" Closed="CloseAll" WindowStartupLocation="Manual">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -13,10 +13,109 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid>
+    <Grid Background="#FF222222">
         <Canvas>
-            <Button Style="{DynamicResource Typewriter}" Height="76" Width="78" Canvas.Left="80" Canvas.Top="342" HorizontalAlignment="Left" VerticalAlignment="Top">
-            </Button>
+            <Border x:Name="LampQ" Style="{DynamicResource Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="67" Canvas.Top="231" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="Q" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampW"  Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="144" Canvas.Top="231" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="W" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border  x:Name="LampE" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="220" Canvas.Top="231" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="E" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border  x:Name="LampR" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="296" Canvas.Top="231" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="R" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampT" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="370" Canvas.Top="231" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="T" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampZ" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="446" Canvas.Top="231" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label  Content="Z" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampU" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="522" Canvas.Top="231" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="U" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border  x:Name="LampI" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="598" Canvas.Top="231" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label  Content="I" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampO" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="672" Canvas.Top="231" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="O" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampA" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="105" Canvas.Top="292" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="A" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampS"  Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="182" Canvas.Top="292" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="S" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border  x:Name="LampD" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="258" Canvas.Top="292" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="D" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border  x:Name="LampF" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="334" Canvas.Top="292" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="F" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampG" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="408" Canvas.Top="292" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="G" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampH" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="484" Canvas.Top="292" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="H" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampJ" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="560" Canvas.Top="292" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="J" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampK" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="636" Canvas.Top="292" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="K" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampY" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="67" Canvas.Top="349" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="Y" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampP"  Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="144" Canvas.Top="349" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="P" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampX" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="220" Canvas.Top="349" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="X" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampC" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="296" Canvas.Top="349" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="C" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampV" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="370" Canvas.Top="349" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="V" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampB" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="446" Canvas.Top="349" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="B" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampN" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="522" Canvas.Top="349" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="N" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border x:Name="LampM" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="598" Canvas.Top="349" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="M" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+            <Border  x:Name="LampL" Style="{DynamicResource ResourceKey=Lamp}" BorderBrush="Black" BorderThickness="3" Height="47" Canvas.Left="672" Canvas.Top="349" Width="60" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="L" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Height="41" Width="40"/>
+            </Border>
+
+            <Label x:Name="reflectorDisplay" Height="41" Canvas.Left="226" Content="0" Canvas.Top="121" Width="54" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18" Background="#FFF0F0F0"/>
+            <TextBox x:Name="ringDisplay1" Height="41" Canvas.Left="316" TextWrapping="Wrap" Text="0" Canvas.Top="121" Width="54" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18"/>
+            <TextBox x:Name="ringDisplay2" Height="41" Canvas.Left="406" TextWrapping="Wrap" Text="0" Canvas.Top="121" Width="54" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="ringDisplay3" Height="41" Canvas.Left="500" TextWrapping="Wrap" Text="0" Canvas.Top="121" Width="54" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Style="{DynamicResource Commands}" x:Name="RotorBTN" Content="Configure Rotors" Canvas.Left="613" Canvas.Top="91" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="119" Click="RotorBTN_Click"/>
+            <Button Style="{DynamicResource Commands}" x:Name="PlugboardBTN" Content="Set Plugboard" Canvas.Left="613" Canvas.Top="142" Height="35" Width="119" HorizontalAlignment="Left" VerticalAlignment="Top" Click="PlugboardBTN_Click"/>
+            <TextBlock Height="89" Canvas.Left="51" TextWrapping="Wrap" Canvas.Top="39" Width="123" Padding="7,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"
+           
+            Text="Configuration Order: 
+                       1. Plugboard
+                       2. Rotors" Background="Transparent" Foreground="#FFF0F0F0" FontSize="13"
+            />
+            <Button Style="{DynamicResource Commands}" x:Name="Reset" Content="Reset" Height="35" Canvas.Left="613" Canvas.Top="39" Width="119" Click="Reset_Click"/>
+            <TextBlock Height="61" Canvas.Left="51" TextWrapping="Wrap" Canvas.Top="125" Width="123" Padding="7,5,0,0"
+           
+                Text="To reset the machine, press the Reset Button"
+            HorizontalAlignment="Center" VerticalAlignment="Top" Background="Transparent" Foreground="#FFF0F0F0" FontSize="13"
+            />
+            <Label Style="{DynamicResource Labeling}" Content="R" Height="41" Canvas.Left="234" Canvas.Top="75" Width="41" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Style="{DynamicResource Labeling}" Content="1" Height="41" Canvas.Left="323" Canvas.Top="75" Width="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Style="{DynamicResource Labeling}" Content="2" Height="41" Canvas.Left="412" Canvas.Top="75" Width="42" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Style="{DynamicResource Labeling}" Content="3" Height="41" Canvas.Left="506" Canvas.Top="75" Width="42" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
     </Grid>
 </Window>

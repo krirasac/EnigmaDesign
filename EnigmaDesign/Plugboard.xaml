@@ -1,0 +1,54 @@
+﻿<Window x:Class="EnigmaDesign.Plugboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EnigmaDesign"
+        mc:Ignorable="d"
+        Title="Plugboard" Height="400" Width="650" Closed="Close" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Design.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="#FF222222">
+        <Button Style="{DynamicResource Commands}" x:Name="Save" Content="Save" HorizontalAlignment="Left" Height="35" Margin="486,32,0,0" VerticalAlignment="Top" Width="117" Click="Complete"/>
+        <Button Style="{DynamicResource Commands}" x:Name="Reset" Content="Reset" HorizontalAlignment="Left" Height="35" Margin="486,74,0,0" VerticalAlignment="Top" Width="117" Click="ResetPlug"/>
+        <Canvas Margin="28,132,28,30">
+            <Button Style="{DynamicResource Plug}" x:Name="PlugQ" Content="Q" Canvas.Left="9" Canvas.Top="10" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugW" Content="W" Canvas.Left="74" Canvas.Top="10" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugE" Content="E" Canvas.Left="142" Canvas.Top="10" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}"  x:Name="PlugR" Content="R" Canvas.Left="209" Canvas.Top="10" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugT" Content="T" Canvas.Left="274" Canvas.Top="10" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugZ" Content="Z" Canvas.Left="341" Canvas.Top="10" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugU" Content="U" Canvas.Left="406" Canvas.Top="10" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugI" Content="I" Canvas.Left="470" Canvas.Top="10" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugO" Content="O" Canvas.Left="531" Canvas.Top="10" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugA" Content="A" Canvas.Left="35" Canvas.Top="83" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugS" Content="S" Canvas.Left="100" Canvas.Top="83" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugD" Content="D" Canvas.Left="168" Canvas.Top="83" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugF" Content="F" Canvas.Left="235" Canvas.Top="83" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugG" Content="G" Canvas.Left="300" Canvas.Top="83" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugH" Content="H" Canvas.Left="367" Canvas.Top="83" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugJ" Content="J" Canvas.Left="432" Canvas.Top="83" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugK" Content="K" Canvas.Left="496" Canvas.Top="83" Height="53" Width="52" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugY" Content="Y" Canvas.Left="9" Canvas.Top="154" Height="53" Width="52" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugP" Content="P" Canvas.Left="74" Canvas.Top="154" Height="53" Width="52" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugX" Content="X" Canvas.Left="142" Canvas.Top="154" Height="53" Width="52" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugC" Content="C" Canvas.Left="209" Canvas.Top="154" Height="53" Width="52" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugV" Content="V" Canvas.Left="274" Canvas.Top="154" Height="53" Width="52" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugB" Content="B" Canvas.Left="341" Canvas.Top="154" Height="53" Width="52" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugN" Content="N" Canvas.Left="406" Canvas.Top="154" Height="53" Width="52" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugM" Content="M" Canvas.Left="470" Canvas.Top="154" Height="53" Width="52" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Configure"/>
+            <Button Style="{DynamicResource Plug}" x:Name="PlugL" Content="L" Canvas.Left="531" Canvas.Top="154" Height="53" Width="52" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Configure"/>
+
+        </Canvas>
+        <Label Style="{DynamicResource Labeling}" Content="Plugs remaining:" HorizontalAlignment="Left" Height="39" Margin="34,35,0,0" VerticalAlignment="Top" Width="198"/>
+        <Label Style="{DynamicResource Labeling}" x:Name="Counter" Content="X" HorizontalAlignment="Left" Height="39" Margin="237,35,0,0" VerticalAlignment="Top" Width="39"/>
+        <Label Style="{DynamicResource Labeling}" x:Name="SelectedPlug" Content="Selected Plug: " HorizontalAlignment="Left" Height="40" Margin="33,79,0,0" VerticalAlignment="Top" Width="275"/>
+    </Grid>
+</Window>
